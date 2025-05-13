@@ -7,54 +7,108 @@
   <title>My Portfolio</title>
 </head>
 <style>
-    :root {
-      --bg-light: #ece4f4;
-      --text-light: #3a2a42;
-      --bg-dark: #101420;
-      --text-dark: #e6efff;
-      --accent-light: #c27ba0;
-      --accent-dark: #b2dfff;
-      --card-light: #e0d4ed;
-      --card-dark: #1e293b;
-    }
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+:root {
+  --bg-light: #ece4f4;       /* Lavender-grey */
+  --text-light: #3a2a42;     /* Plum soft */
+  --bg-dark: #101420;
+  --text-dark: #e6efff;
+  --accent-light: #c27ba0;   /* Orchid pink */
+  --accent-dark: #b2dfff;
+  --card-light: #e0d4ed;     /* Mist purple */
+  --card-dark: #1e293b;
+}
 
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: var(--bg-light);
-      color: var(--text-light);
-      transition: background-color 0.3s, color 0.3s;
-      line-height: 1.6;
-    }
 
-    body.dark-mode {
-      background-color: var(--bg-dark);
-      color: var(--text-dark);
-    }
 
-    header {
-      background-color: inherit;
-      padding: 1rem 2rem;
-      position: sticky;
-      top: 0;
-      z-index: 999;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    }
+body {
+    font-family: Ubuntu;
+    background-color: var(--bg-light);
+    color: var(--text-light);
+    transition: background-color 0.3s, color 0.3s;
+    line-height: 1.6;
+}
 
-    .logo {
-      font-size: 1.6rem;
-      font-weight: bold;
-      letter-spacing: 1px;
-    }
+body.dark-mode {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+}
 
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 2rem;
-      font-weight: 500;
-    }
+header {
+  background-color: inherit;
+  color: var(--text-light);
+  padding: 50px 0 20px 17rem;
+  border-bottom: 5px solid var(--accent-light); /* ✅ Light mode color */
+  display: flex;
+  flex-wrap: wrap;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s, color 0.3s;
+}
+
+header img {
+  margin-right: 40px;
+  width: 170px;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+header .header-text {
+  max-width: 900px;
+}
+
+header h2 {
+  font-size: 2.5em;
+  margin: 15px 0 5px 0;
+}
+
+header p {
+  color: inherit;
+}
+
+body.dark-mode header {
+  color: var(--text-dark);
+  border-bottom: 5px solid var(--accent-dark); /* ✅ Dark mode color */
+}
+
+body.dark-mode header p {
+  color: var(--text-dark);
+}
+       nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+  background-color: var(--bg-light);
+  transition: background-color 0.3s, color 0.3s;
+            padding: 10px 0;
+            border-bottom: 1px solid var(--bg-light)
+        }
+        .navbar-list {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            transition: scale 500ms, filter 500ms;
+        }
+        .navbar-list:has(:hover) :not(:hover) {
+            scale: 0.8;
+            filter: blur(1px);
+        }
+        .navbar-list li {
+            display: inline-block;
+        }
+        .navbar-list a {
+  color: var(--text-light);
+            text-decoration: none;
+            font-size: 1.1em;
+            font-weight: bold;
+            padding: 10px;
+            transition: color 0.3s ease;
+        }
+        .navbar-list a:hover {
+            color: var(--accent-dark);
+            text-decoration: underline;
+        }
 
     a {
       color: var(--accent-light);
@@ -62,88 +116,81 @@
       transition: 0.3s;
     }
 
-    body.dark-mode a {
-      color: var(--accent-dark);
-    }
+body.dark-mode nav {
+  background-color: var(--bg-dark);
+}
+body.dark-mode .navbar-list a {
+  color: var(--text-dark);
+}
 
-    section .project {
-      display: flex;
-    }
-
-    .project-grid {
+section .project {
+    display: block;
+}
+.project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
-  justify-items: center;
-  margin-top: 1rem;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+   
 }
-
 .project-card {
-  background-color: var(--card-light);
-  color: var(--text-light);
-  border-radius: 15px;
-  overflow: hidden;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
-  max-width: 320px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  transition: all 0.3s ease;
+   background-color: var(--card-light);
+   color: var(--text-light);
+   border-radius: 10px;
+   overflow: hidden;
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.07);
+  max-width: 290px;
+   transition: background-color 0.3s, color 0.3s;
+   
 }
-
+  .project-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+  }
+  .project-card .project-info {
+    padding: 15px;
+    text-align: center;
+  }
+  .project-card .project-info h3 {
+    color: #e91e63;
+    margin-bottom: 10px;
+  }
+body.dark-mode .project-card .project-info h3 {
+  color: var(--accent-dark);
+}
 .project-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(160, 103, 139, 0.2); /* dari accent-light */
 }
-
-.project-card img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-}
-
-.project-info {
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.8rem;
-  text-align: left;
-}
-
-.project-info h3 {
-  color: var(--accent-light);
-  font-size: 1.2rem;
-  margin-bottom: 0.3rem;
-}
-
 body.dark-mode .project-card {
   background-color: var(--card-dark);
   color: var(--text-dark);
 }
+  
 
-    section {
-      background-color: #ddeeff;
-      color: var(--text-light);
-      margin: 2rem auto;
-      padding: 1.5rem 2rem;
-      border-radius: 12px;
-      max-width: 900px;
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
-      transition: background-color 0.3s, color 0.3s;
-    }
+section {
+  background-color: #ddeeff;
+  color: var(--text-light);
+  margin: 2rem auto;
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  max-width: 900px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+  transition: background-color 0.3s, color 0.3s;
+}
 
-    body.dark-mode section {
-      background-color: #1c2533;
-    }
+body.dark-mode section {
+  background-color: #1c2533;
+  color: var(--text-dark);
+}
 
     h1, h2, h3 {
       color: var(--accent-light);
-      margin-bottom: 3rem;
     }
 
-    body.dark-mode h1,
-    body.dark-mode h2,
-    body.dark-mode h3 {
+    body.dark-mode h1, body.dark-mode h2, body.dark-mode h3 {
       color: var(--accent-dark);
     }
 
@@ -154,15 +201,15 @@ body.dark-mode .project-card {
       margin-top: 1.5rem;
     }
 
-    .skill {
-      background: #b96cc3;
-      color: white;
-      padding: 0.7rem 1.4rem;
-      border-radius: 25px;
-      font-weight: 600;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      transition: background 0.3s;
-    }
+.skill {
+    background: #b96cc3;
+    color: white;
+    padding: 0.7rem 1.4rem;
+    border-radius: 25px;
+    font-weight: 600;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s;
+}
 
     body.dark-mode .skill {
       background: var(--accent-dark);
@@ -188,33 +235,33 @@ body.dark-mode .project-card {
       box-sizing: border-box;
     }
 
-    body.dark-mode input,
-    body.dark-mode textarea {
+    body.dark-mode input, body.dark-mode textarea {
       background-color: #1e1e2f;
       color: #eee;
       border-color: #444;
     }
 
-    button {
-      background: var(--accent-light);
-      color: white;
-      padding: 0.9rem 1.5rem;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
-      font-size: 1rem;
-      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
-      transition: background 0.3s;
-    }
+button {
+    background: var(--accent-light);
+    color: white;
+    padding: 0.9rem 1.5rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s;
+}
 
     body.dark-mode button {
       background: var(--accent-dark);
       color: #101420;
     }
 
-    button:hover {
-      background: #824c8c;
-    }
+button:hover {
+    background: #824c8c;
+}
+
 
     body.dark-mode button:hover {
       background: #7db6ff;
@@ -250,31 +297,28 @@ body.dark-mode .project-card {
       background-color: var(--bg-dark);
       color: #ddd;
     }
-
-    /* Tambahan agar teks terbaca saat dark mode aktif */
-    body.dark-mode,
-    body.dark-mode p,
-    body.dark-mode label,
-    body.dark-mode li,
-    body.dark-mode input,
-    body.dark-mode textarea {
-      color: var(--text-dark);
-    }
   </style>
 <body>
-  <header>
-    <div class="logo">MyPortfolio</div>
-    <nav>
-      <ul>
-        <li><a href="#about">About Me</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#project">Project</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="#">Other</a></li>
-      </ul>
-    </nav>
-    <button class="toggle-btn" onclick="toggleMode()">🌗 Toggle Mode</button>
-  </header>
+<header>
+<img src="download (4).jpeg" alt="Foto Zidan" />
+  <div class="header-text">
+    <h2>Game and Backend Developer</h2>
+      <p>
+        Hello, my name is <u style="color :#b2dfff">Ahmad Zidan Al Ikhsan</u>, and I currently reside in Bogor, Indonesia. 
+      </p>
+  </div>
+</header>
+
+<nav>
+  <ul class="navbar-list">
+    <li><a href="#about">About Me</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#project">Project</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#">Other</a></li>
+  </ul>
+</nav>
+<button class="toggle-btn" onclick="toggleMode()">🌗 Toggle Mode</button>
 
   <main class="container">
     <section id="about" class="about-me">
@@ -287,28 +331,19 @@ body.dark-mode .project-card {
       <p>Saya percaya bahwa teknologi adalah alat penting untuk membangun masa depan yang lebih baik.</p>
     </section>
 
-    <section id="skills">
-      <h2>💡Skills</h2>
-      <div align="skills-list">
-          <img src="logo/c-sharp.png" height="40" alt="csharp logo"  />
-          <img width="12" />
-          <img src="logo/unity.png" height="40" alt="unity logo"  />
-          <img width="12" />
-          <img src="logo/aseprite-seeklogo.png" height="40" alt="aseprite logo"  />
-          <img width="12" />
-          <img src="logo/java.png" height="40" alt="java logo"  />
-          <img width="12" />
-          <img src="logo/html-5.png" height="40" alt="HTML5 logo"  />
-          <img width="12" />
-          <img src="logo/css-3.png" height="40" alt="CSS3"  />
-          <img width="12" />
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" height="40" alt="php logo"  />
-          <img width="12" />
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg" height="40" alt="laravel logo"  />
-          <img width="12" />
-          
-        </div>
-    </section>
+<section id="skills">
+  <h2>💡Skills</h2>
+  <div class="skills-list">
+    <img src="logo/c-sharp.png" height="40" alt="csharp logo"  />
+      <img src="logo/unity.png" height="40" alt="unity logo"  />
+      <img src="logo/aseprite-seeklogo.png" height="40" alt="aseprite logo"  />
+      <img src="logo/java.png" height="40" alt="java logo"  />
+      <img src="logo/html-5.png" height="40" alt="HTML5 logo"  />
+      <img src="logo/css-3.png" height="40" alt="CSS3"  />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" height="40" alt="php logo"  />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg" height="40" alt="laravel logo"  />   
+  </div>
+</section>
 
 <section id="project">
   <h2>🔎 Project</h2>
