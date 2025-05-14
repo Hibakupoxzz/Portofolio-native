@@ -3,350 +3,66 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  
-  <title>My Portfolio</title>
+  <link rel="stylesheet" href="Css/navbar.css">
+  <link rel="stylesheet" href="Css/style.css">
+  <title>Portfolio</title>
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+  rel="stylesheet"
+/>
 </head>
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
-:root {
-  --bg-light: #ece4f4;       /* Lavender-grey */
-  --text-light: #3a2a42;     /* Plum soft */
-  --bg-dark: #101420;
-  --text-dark: #e6efff;
-  --accent-light: #c27ba0;   /* Orchid pink */
-  --accent-dark: #b2dfff;
-  --card-light: #e0d4ed;     /* Mist purple */
-  --card-dark: #1e293b;
-}
-
-
-
-body {
-    font-family: Ubuntu;
-    background-color: var(--bg-light);
-    color: var(--text-light);
-    transition: background-color 0.3s, color 0.3s;
-    line-height: 1.6;
-}
-
-body.dark-mode {
-  background-color: var(--bg-dark);
-  color: var(--text-dark);
-}
-
-header {
-  background-color: inherit;
-  color: var(--text-light);
-  padding: 50px 0 20px 17rem;
-  border-bottom: 5px solid var(--accent-light); /* ✅ Light mode color */
-  display: flex;
-  flex-wrap: wrap;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  transition: border-color 0.3s, color 0.3s;
-}
-
-header img {
-  margin-right: 40px;
-  width: 170px;
-  height: auto;
-  border-radius: 10px;
-  margin-bottom: 20px;
-}
-
-header .header-text {
-  max-width: 900px;
-}
-
-header h2 {
-  font-size: 2.5em;
-  margin: 15px 0 5px 0;
-}
-
-header p {
-  color: inherit;
-}
-
-body.dark-mode header {
-  color: var(--text-dark);
-  border-bottom: 5px solid var(--accent-dark); /* ✅ Dark mode color */
-}
-
-body.dark-mode header p {
-  color: var(--text-dark);
-}
-       nav {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-  background-color: var(--bg-light);
-  transition: background-color 0.3s, color 0.3s;
-            padding: 10px 0;
-            border-bottom: 1px solid var(--bg-light)
-        }
-        .navbar-list {
-            list-style: none;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            transition: scale 500ms, filter 500ms;
-        }
-        .navbar-list:has(:hover) :not(:hover) {
-            scale: 0.8;
-            filter: blur(1px);
-        }
-        .navbar-list li {
-            display: inline-block;
-        }
-        .navbar-list a {
-  color: var(--text-light);
-            text-decoration: none;
-            font-size: 1.1em;
-            font-weight: bold;
-            padding: 10px;
-            transition: color 0.3s ease;
-        }
-        .navbar-list a:hover {
-            color: var(--accent-dark);
-            text-decoration: underline;
-        }
-
-    a {
-      color: var(--accent-light);
-      text-decoration: none;
-      transition: 0.3s;
-    }
-
-body.dark-mode nav {
-  background-color: var(--bg-dark);
-}
-body.dark-mode .navbar-list a {
-  color: var(--text-dark);
-}
-
-section .project {
-    display: block;
-}
-.project-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-  justify-content: center;
-  margin-top: 20px;
-   
-}
-.project-card {
-   background-color: var(--card-light);
-   color: var(--text-light);
-   border-radius: 10px;
-   overflow: hidden;
-   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.07);
-  max-width: 290px;
-   transition: background-color 0.3s, color 0.3s;
-   
-}
-  .project-card img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-  }
-  .project-card .project-info {
-    padding: 15px;
-    text-align: center;
-  }
-  .project-card .project-info h3 {
-    color: #e91e63;
-    margin-bottom: 10px;
-  }
-body.dark-mode .project-card .project-info h3 {
-  color: var(--accent-dark);
-}
-.project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(160, 103, 139, 0.2); /* dari accent-light */
-}
-body.dark-mode .project-card {
-  background-color: var(--card-dark);
-  color: var(--text-dark);
-}
-  
-
-section {
-  background-color: #ddeeff;
-  color: var(--text-light);
-  margin: 2rem auto;
-  padding: 1.5rem 2rem;
-  border-radius: 12px;
-  max-width: 900px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
-  transition: background-color 0.3s, color 0.3s;
-}
-
-body.dark-mode section {
-  background-color: #1c2533;
-  color: var(--text-dark);
-}
-
-    h1, h2, h3 {
-      color: var(--accent-light);
-    }
-
-    body.dark-mode h1, body.dark-mode h2, body.dark-mode h3 {
-      color: var(--accent-dark);
-    }
-
-    .skills-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      margin-top: 1.5rem;
-    }
-
-.skill {
-    background: #b96cc3;
-    color: white;
-    padding: 0.7rem 1.4rem;
-    border-radius: 25px;
-    font-weight: 600;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: background 0.3s;
-}
-
-    body.dark-mode .skill {
-      background: var(--accent-dark);
-      color: #101420;
-    }
-
-    .skill:hover {
-      background-color: #3d4b64;
-    }
-
-    body.dark-mode .skill:hover {
-      background-color: #7db6ff;
-    }
-
-    input, textarea {
-      background-color: #f5fbff;
-      color: #101420;
-      border: 1.5px solid #ccc;
-      padding: 0.8rem;
-      border-radius: 10px;
-      width: 100%;
-      margin-bottom: 1.2rem;
-      box-sizing: border-box;
-    }
-
-    body.dark-mode input, body.dark-mode textarea {
-      background-color: #1e1e2f;
-      color: #eee;
-      border-color: #444;
-    }
-
-button {
-    background: var(--accent-light);
-    color: white;
-    padding: 0.9rem 1.5rem;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    font-size: 1rem;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
-    transition: background 0.3s;
-}
-
-    body.dark-mode button {
-      background: var(--accent-dark);
-      color: #101420;
-    }
-
-button:hover {
-    background: #824c8c;
-}
-
-
-    body.dark-mode button:hover {
-      background: #7db6ff;
-    }
-
-    .toggle-btn {
-      padding: 0.6rem 1.2rem;
-      border-radius: 25px;
-      border: none;
-      cursor: pointer;
-      background: var(--accent-light);
-      color: white;
-      font-size: 1rem;
-      transition: background 0.3s;
-    }
-
-    body.dark-mode .toggle-btn {
-      background: var(--accent-dark);
-      color: #101420;
-    }
-
-    footer {
-      text-align: center;
-      font-size: 0.95rem;
-      padding: 3rem 0;
-      color: gray;
-      background-color: var(--bg-light);
-      margin-top: 2rem;
-      border-top: 1px solid #e0e0e0;
-    }
-
-    body.dark-mode footer {
-      background-color: var(--bg-dark);
-      color: #ddd;
-    }
-  </style>
 <body>
 <header>
 <img src="download (4).jpeg" alt="Foto Zidan" />
   <div class="header-text">
     <h2>Game and Backend Developer</h2>
       <p>
-        Hello, my name is <u style="color :#b2dfff">Ahmad Zidan Al Ikhsan</u>, and I currently reside in Bogor, Indonesia. 
+        Hello, my name is <u style="text-decoration: none; color :#e91e63">Ahmad Zidan Al Ikhsan</u>, and I currently reside in Bogor, Indonesia. 
       </p>
   </div>
 </header>
 
-<nav>
-  <ul class="navbar-list">
-    <li><a href="#about">About Me</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#project">Project</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#">Other</a></li>
-  </ul>
-</nav>
-<button class="toggle-btn" onclick="toggleMode()">🌗 Toggle Mode</button>
+<button class="burger" onclick="toggleMenu()">
+      <span class="burger-icon"></span>
+    </button>
+    <div class="menu">
+      <nav>
+        <a href="#about" style="animation-delay: 0.2s">About</a>
+        <a href="#skills" style="animation-delay: 0.3s">Portfolio</a>
+        <a href="#project" style="animation-delay: 0.4s">Services</a>
+        <a href="#contact" style="animation-delay: 0.5s">Contact</a>
+        <a href="#" style="animation-delay: 0.5s">Other</a>
+      </nav>
+      <button class="toggle-btn" onclick="toggleMode()"><img src="logo/sleep-mode.png" alt="" style="width: 10%;"></button>
+</div>
 
   <main class="container">
     <section id="about" class="about-me">
-      <h1>👻 Hallo Bro, Saya <strong>Ahmad Zidan Al Ikhsan</strong></h1>
+      <h1>👻 About Me</strong></h1>
       <p>
-        Selamat datang di situs web portofolio pribadi saya! Saya adalah seorang
-        <strong>Murid di SMK Plus Pelita Nusantara</strong> yang senang membuat aplikasi web menggunakan
-        <strong>HTML, CSS, dan JavaScript</strong>.
+        "I am a vocational school student majoring in Software Engineering with a great interest in technology, especially software development. I have expertise in Game Development, including designing, programming, and optimizing using game engines such as Unity.
       </p>
-      <p>Saya percaya bahwa teknologi adalah alat penting untuk membangun masa depan yang lebih baik.</p>
+      <p>In addition, I am also competent as a Backend Developer in building and managing websites efficiently and securely. I am committed to continuing to learn and contribute to the world of technology professionally."</p>
     </section>
 
 <section id="skills">
   <h2>💡Skills</h2>
   <div class="skills-list">
-    <img src="logo/c-sharp.png" height="40" alt="csharp logo"  />
-      <img src="logo/unity.png" height="40" alt="unity logo"  />
-      <img src="logo/aseprite-seeklogo.png" height="40" alt="aseprite logo"  />
-      <img src="logo/java.png" height="40" alt="java logo"  />
-      <img src="logo/html-5.png" height="40" alt="HTML5 logo"  />
-      <img src="logo/css-3.png" height="40" alt="CSS3"  />
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" height="40" alt="php logo"  />
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg" height="40" alt="laravel logo"  />   
+    <img src="logo/c-sharp.png" height="50" alt="csharp logo"  />
+      <img src="logo/unity.png" height="50" alt="unity logo"  />
+      <img src="logo/aseprite-seeklogo.png" height="50" alt="aseprite logo"  />
+      <img src="logo/java.png" height="50" alt="java logo"  />
+      <img src="logo/html-5.png" height="50" alt="HTML5 logo"  />
+      <img src="logo/css-3.png" height="50" alt="CSS3"  />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" height="50" alt="php logo"  />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg" height="50" alt="laravel logo"  />   
+      <img src="logo/mysql.png" height="50" alt="laravel logo"  />   
+      <img src="logo/figma.png" height="50" alt="laravel logo"  />   
   </div>
 </section>
 
 <section id="project">
-  <h2>🔎 Project</h2>
+  <h2>🪁 Project</h2>
   <div class="project-grid">
     <div class="project-card">
       <a href="https://hibakupoxzz.github.io/Blockdraw/">
@@ -374,17 +90,46 @@ button:hover {
     </div>
 
     <div class="project-card">
-      <a href="#">
-        <img src="Foto project/Screenshot 2025-01-30 111522.png" alt="Project Lain" />
+      <a href="https://www.zidanikhsan.my.id/">
+        <img src="Foto project/Latest Porto.png" alt="Project Lain" />
       </a>
       <div class="project-info">
-        <h3>Nama Project</h3>
+        <h3>Latest Portofolio</h3>
         <p>
           Deskripsi singkat tentang project ini, teknologi yang digunakan, serta tujuan pembuatannya.
         </p>
       </div>
     </div>
   </div>
+</section>
+
+<section id="contact" class="section">
+<h1>🔎 Social Media</h1>
+<h3>Contact me via:</h3>
+<div class="social-links" >
+  <a
+    href="https://github.com/Hibakupoxzz"
+    target="_blank"
+    title="GitHub"
+
+  >
+    <i class="fab fa-github"></i>
+  </a>
+  <a
+    href="https://www.instagram.com/hibakupoxz_/"
+    target="_blank"
+    title="Instagram"
+  >
+    <i class="fab fa-instagram"></i>
+  </a>
+  <a
+    href="https://www.linkedin.com/in/ahmad-zidan-al-ikhsan-594732365?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+    target="_blank"
+    title="Linkedin"
+  >
+  <i class="fa-brands fa-linkedin"></i>
+  </a>
+</div>  
 </section>
 
 
@@ -400,7 +145,7 @@ button:hover {
         <label for="message">Pesan</label>
         <textarea id="message" name="message" rows="4" placeholder="Tulis pesan Anda..." required></textarea>
 
-        <button type="submit">🪧 Kirim Pesan</button>
+        <button type="submit" class="tombol">🪧 Kirim Pesan</button>
         <p class="success-msg" id="success-message"></p>
       </form>
     </section>
@@ -412,5 +157,10 @@ button:hover {
 
   <script src="js/gantimode.js"></script>
   <script src="js/validasi.js"></script>
+  <script type="text/javascript">
+      const toggleMenu = () => {
+        document.body.classList.toggle("open");
+      };
+    </script>
 </body>
 </html>
