@@ -3,13 +3,13 @@ window.addEventListener('DOMContentLoaded', () => {
   const body = document.body;
   const btn = document.getElementById('mode-toggle');
 
-  if (savedTheme === 'dark') {
-    body.classList.add('dark-mode');
-    if (btn) btn.textContent = '🌞';
-  } else {
-    body.classList.remove('dark-mode');
-    if (btn) btn.textContent = '🌙';
-  }
+  // if (savedTheme === 'dark') {
+  //   body.classList.add('dark-mode');
+  //   if (btn) btn.textContent = '🌞';
+  // } else {
+  //   body.classList.remove('dark-mode');
+  //   if (btn) btn.textContent = '🌙';
+  // }
 });
 
 function toggleMode() {
