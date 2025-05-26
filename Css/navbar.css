@@ -34,14 +34,14 @@ body.open .burger {
   left: 0;
   display: grid;
   place-items: center;
-  width: 50%;
-  max-width: 400px;
+  width: 100%; /* ubah dari 50% */
   height: 100%;
   background: rgb(0 0 0 / 40%);
   backdrop-filter: blur(10px);
   translate: -100% 0;
   transition: translate 0.425s cubic-bezier(0.175, 0.885, 0.32, 1);
 }
+
 
 .menu nav {
   opacity: 0;

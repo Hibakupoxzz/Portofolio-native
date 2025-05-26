@@ -232,3 +232,111 @@ body.dark-mode .tombol {
       background-color: var(--bg-dark);
       color: #ddd;
     }
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+.skills-list img {
+  height: 50px;
+  width: auto;
+  transition: transform 0.3s ease;
+}
+
+.skills-list img:hover {
+  transform: scale(1.1);
+}
+
+    /* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  header {
+    padding: 30px 1rem 20px 1rem;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header img {
+    margin-right: 0;
+    margin-bottom: 15px;
+    width: 120px;
+  }
+
+  header .header-text {
+    max-width: 100%;
+  }
+
+  header h2 {
+    font-size: 1.8em;
+  }
+
+  section {
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 10px;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr; /* 1 kolom untuk hape */
+  }
+
+  .project-card {
+    max-width: 100%;
+  }
+
+  .skills-list {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .social-links {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .social-links a {
+    font-size: 2em;
+    margin: 0 10px;
+  }
+
+  .burger {
+    width: 60px;
+    height: 60px;
+    background-size: 30px;
+  }
+
+  .menu {
+    width: 100%; /* full screen untuk hape */
+    max-width: none;
+  }
+
+  .menu nav {
+    padding-top: 4rem;
+  }
+
+  .menu a {
+    font-size: 24px;
+    height: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  #skills h2 {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
+  .skills-list {
+    gap: 0.8rem;
+    padding: 0 1rem;
+  }
+
+  .skills-list img {
+    height: 40px;
+  }
+}
