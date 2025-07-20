@@ -48,7 +48,7 @@ header .header-text {
   max-width: 900px;
 }
 
-header h2 {
+header h1 {
   font-size: 2.5em;
   margin: 15px 0 5px 0;
 }
@@ -129,10 +129,14 @@ body.dark-mode section {
   color: var(--text-dark);
 }
 
-    h1, h2, h3 {
+    h1, h3 {
       color: var(--accent-light);
     }
 
+    h2 {
+      display: inline-block;
+      border-bottom: 3px solid #e91e63;
+    }
     body.dark-mode h1, body.dark-mode h2, body.dark-mode h3 {
       color: var(--accent-dark);
     }

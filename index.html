@@ -6,16 +6,29 @@
   <link rel="stylesheet" href="Css/navbar.css">
   <link rel="stylesheet" href="Css/style.css">
   <title>Portfolio</title>
-<link
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-  rel="stylesheet"
-/>
+  <link
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+
+  <!--- meta tag-->
+  <meta name="description" content="I am a vocational school student majoring in Software Engineering with a great interest in technology, especially software development. 
+  I have expertise in Game Development, including designing, programming, and optimizing using game engines such as Unity.">
+  <meta name="keywords" content="Ahmad Zidan Al Ikhsan, Ahmad zidan, Hibakupoxz, Smk plus pelita nsuantara, 
+  Pacar illyasviel, Pacar hyacine, Zidan, Pacar Kanade Yoisaki, Pacar Chinatsu, Pacar Yoshino, Pacar Natsumi, Pacar Miyu, Pacar yuzu blue archive,
+  pacar seia, pacar sylphiette">
+  <meta name="author" content="Ahmad Zidan Al Ikhsan">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Ahmad Zidan Al Ikhsan">
+  <meta property="og:description" content="Game and Backend Developer">
+  <link rel="icon" href="" type="image/png">
+  <meta property="og:url" content="https://www.zidanikhsan.my.id/">
+  <meta property="og:type" content="website">
+  <meta name="google-site-verification" content="googleb1b4d4ba0b832e56.html">
 </head>
 <body class="dark-mode">
 <header>
 <img src="Ahmad Zidan Al Ikhsan 1 banding 1.JPG" alt="Foto Zidan" />
   <div class="header-text">
-    <h2>Game and Backend Developer</h2>
+    <h1>Game and Backend Developer</h1>
       <p>
         Hello, my name is <u style="text-decoration: none; color :#e91e63">Ahmad Zidan Al Ikhsan</u>, and I currently reside in Bogor, Indonesia. 
       </p>
@@ -38,7 +51,7 @@
 
   <main class="container">
     <section id="about" class="about-me">
-      <h1>👻 About Me</strong></h1>
+      <h2>About Me</h2>
       <p>
         "I am a vocational school student majoring in Software Engineering with a great interest in technology, especially software development. 
         I have expertise in Game Development, including designing, programming, and optimizing using game engines such as Unity.
@@ -48,7 +61,7 @@
     </section>
 
 <section id="skills">
-  <h2>💡Skills</h2>
+  <h2>Skills</h2>
   <div class="skills-list">
     <img src="logo/c-sharp.png" alt="C# logo" />
     <img src="logo/unity.png" alt="Unity logo" />
@@ -64,7 +77,7 @@
 </section>
 
 <section id="project">
-  <h2>🪁 Project</h2>
+  <h2>Tech Stack & Skills</h2>
   <div class="project-grid">
     <div class="project-card">
       <a href="https://hibakupoxzz.github.io/Blockdraw/">
@@ -73,8 +86,8 @@
       <div class="project-info">
         <h3>BlockDraw</h3>
         <p>
-          BlockDraw adalah editor pixel yang dirancang untuk kreativitas dalam membuat pixel art. Dibuat dengan HTML, CSS, 
-          dan JavaScript selama tiga minggu karena kecintaan saya pada pixel art.
+            BlockDraw is a pixel editor designed to spark creativity in making pixel art. It was built using HTML, CSS, and JavaScript over 
+            the course of three weeks, driven by my passion for pixel art.
         </p>
       </div>
     </div>
@@ -87,19 +100,34 @@
       <div class="project-info">
         <h3>Hyacine Clockwork</h3>
         <p>
-          Deskripsi singkat tentang project ini, teknologi yang digunakan, serta tujuan pembuatannya.
+          This digital clock website displays the current time in real-time, featuring a cute and charming Hyacine-themed design.
+          It was created to combine functionality with an aesthetic that feels fun and visually
         </p>
       </div>
     </div>
 
     <div class="project-card">
-      <a href="https://www.zidanikhsan.my.id/">
+      <a href="https://hibakupoxzz.github.io/Porto-Native/">
         <img src="Foto project/Latest Porto.png" alt="Project Lain" />
       </a>
       <div class="project-info">
         <h3>Latest Portofolio</h3>
         <p>
-          Deskripsi singkat tentang project ini, teknologi yang digunakan, serta tujuan pembuatannya.
+          This old portfolio contains my early practice and experiments in web development,
+         featuring a simple design and informative content. It is a portfolio I created while learning how to build websites.
+        </p>
+      </div>
+    </div>
+  </div>
+
+      <div class="project-card">
+      <a href="https://hibakupoxzz.github.io/Yuzu-Under-Construction-Web/">
+        <img src="Foto project/SPMB.png" alt="Project Lain" />
+      </a>
+      <div class="project-info">
+        <h3>SPMB PENUS</h3>
+        <p>This SPMB website was built using Laravel and Blade to simplify the online registration process for new students at SMK Plus Pelita Nusantara and to assist school admins in managing the data efficiently.
+          
         </p>
       </div>
     </div>
@@ -107,7 +135,7 @@
 </section>
 
 <section id="contact" class="section">
-<h1>🔎 Social Media</h1>
+<h2>Social Media</h2>
 <h3>Contact me via:</h3>
 <div class="social-links" >
   <a
@@ -137,7 +165,7 @@
 
 
     <section id="contact">
-      <h2>📞 Contact Me</h2>
+      <h2>Contact Me</h2>
       <form id="contact-form" novalidate>
         <label for="name">Nama Lengkap</label>
         <input type="text" id="name" name="name" placeholder="Nama Anda" required />
@@ -148,7 +176,7 @@
         <label for="message">Pesan</label>
         <textarea id="message" name="message" rows="4" placeholder="Tulis pesan Anda..." required></textarea>
 
-        <button type="submit" class="tombol">🪧 Kirim Pesan</button>
+        <button type="submit" class="tombol">Kirim Pesan</button>
         <p class="success-msg" id="success-message"></p>
       </form>
     </section>
