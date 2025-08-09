@@ -94,6 +94,7 @@ body.open .menu nav {
   text-decoration: none;
   cursor: pointer;
   transition: 0.4s;
+  display: inline-block;
 }
 
 .menu a::before,
